@@ -279,26 +279,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 20,
                       ),
                       Text('Crud Operation'),
-                      StreamBuilder(
-                          stream: planning.snapshots(),
-                          builder: (context,
-                              AsyncSnapshot<QuerySnapshot> streamSnapshot) {
-                            if (streamSnapshot.hasData) {
-                              return ListView.builder(
-                                  itemCount: streamSnapshot.data!.docs.length,
-                                  itemBuilder: (context, index) {
-                                    final DocumentSnapshot documentSnapshot =
-                                        streamSnapshot.data!.docs[index];
-                                    return Card(
-                                      child: ListTile(
-                                        title: Text(documentSnapshot['title']),
-                                      ),
-                                    );
-                                  });
-                            } else {
-                              return CircularProgressIndicator();
-                            }
-                          })
+                      //   StreamBuilder(
+                      //       stream: planning.snapshots(),
+                      //       builder: (context,
+                      //           AsyncSnapshot<QuerySnapshot> streamSnapshot) {
+                      //         if (streamSnapshot.hasData) {
+                      //           return ListView.builder(
+                      //               itemCount: streamSnapshot.data!.docs.length,
+                      //               itemBuilder: (context, index) {
+                      //                 final DocumentSnapshot documentSnapshot =
+                      //                     streamSnapshot.data!.docs[index];
+                      //                 return Card(
+                      //                   child: ListTile(
+                      //                     title: Text(documentSnapshot['title']),
+                      //                   ),
+                      //                 );
+                      //               });
+                      //         } else {
+                      //           return CircularProgressIndicator();
+                      //         }
+                      //       })
                     ],
                   ),
                 ),
