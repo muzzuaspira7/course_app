@@ -18,8 +18,11 @@ class _StatisticsState extends State<Statistics> {
             const Row(
               children: [
                 Icon(
-                  Icons.alarm,
+                  Icons.add_alert_rounded,
                   color: Colors.grey,
+                ),
+                SizedBox(
+                  width: 20,
                 ),
               ],
             ),
